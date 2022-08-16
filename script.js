@@ -68,8 +68,8 @@ function game() {
     const computerSelection = getComputerChoice();
     const button = document.querySelector('button').innerText = "Play Again!"
     console.log(playRound(playerSelection, computerSelection));
-    console.log("Player chooses " + playerSelection + playerScore);
-    console.log("Computer chooses " + computerSelection + computerScore);
+    console.log(`Player chooses ${playerSelection}. Player score is ${playerScore}`);
+    console.log(`Computer chooses ${computerSelection}. Computer score is ${computerScore}`);
     console.log('-----------------------------------');
     playRound(playerSelection, computerSelection);
   }
