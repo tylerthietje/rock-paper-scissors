@@ -73,8 +73,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// prompt('Please enter Rock, Paper, or Scissors to play!');
-
 function game() {
   console.log(playRound(playerSelection, computerSelection));
   console.log(
@@ -85,12 +83,13 @@ function game() {
   );
   console.log('-----------------------------------');
   playRound(playerSelection, computerSelection);
-}
 
-if (playerScore > computerScore) {
-  return 'Congratulations! You beat the computer!';
-} else if (computerScore > playerScore) {
-  return 'Uh Oh! The computer got you. WOMP WOMP!!';
-} else {
-  return "It's a tie, give it another go!";
+
+  if (playerScore > computerScore) {
+    return 'Congratulations! You beat the computer!';
+  } else if (computerScore > playerScore) {
+    return 'Uh Oh! The computer got you. WOMP WOMP!!';
+  } else {
+    return "It's a tie, give it another go!";
+  };
 };
