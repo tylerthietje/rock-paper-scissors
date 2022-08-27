@@ -1,5 +1,16 @@
 let playerScore = 0;
 let computerScore = 0;
+const buttons = document.querySelectorAll('button');
+let playerSelection;
+const computerSelection = getComputerChoice();
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    playerSelection = button.id;
+    console.log(playerSelection);
+    playRound(playerSelection, computerSelection);
+  });
+});
 
 function getComputerChoice() {
   let outcome = ['rock', 'paper', 'scissors'];
@@ -59,28 +70,27 @@ function playRound(playerSelection, computerSelection) {
     computerSelection == 'scissors'
   ) {
     return "It's a tie. Please play again!";
-  } 
+  }
 }
+
+// prompt('Please enter Rock, Paper, or Scissors to play!');
 
 function game() {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt('Please enter Rock, Paper, or Scissors to play!');
-    const computerSelection = getComputerChoice();
-    const button = document.querySelector('button').innerText = "Play Again!"
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`Player chooses ${playerSelection}. Player score is ${playerScore}`);
-    console.log(`Computer chooses ${computerSelection}. Computer score is ${computerScore}`);
-    console.log('-----------------------------------');
-    playRound(playerSelection, computerSelection);
-  }
-
-
-  if (playerScore > computerScore) {
-    return "Congratulations! You beat the computer!";
-  } else if (computerScore > playerScore) {
-    return "Uh Oh! The computer got you. WOMP WOMP!!";
-  } else {
-    return "It's a tie, give it another go!";
-  }
+  console.log(playRound(playerSelection, computerSelection));
+  console.log(
+    `Player chooses ${playerSelection}. Player score is ${playerScore}`
+  );
+  console.log(
+    `Computer chooses ${computerSelection}. Computer score is ${computerScore}`
+  );
+  console.log('-----------------------------------');
+  playRound(playerSelection, computerSelection);
 }
 
+if (playerScore > computerScore) {
+  return 'Congratulations! You beat the computer!';
+} else if (computerScore > playerScore) {
+  return 'Uh Oh! The computer got you. WOMP WOMP!!';
+} else {
+  return "It's a tie, give it another go!";
+};
