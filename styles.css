@@ -5,7 +5,7 @@
 
 body {
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
   color: white;
   background-color: black;
@@ -15,15 +15,18 @@ body {
 header {
   background-color: #472d54;
   margin: 0;
-  padding: 20px;
+  padding: 25px;
 }
 
 .results-message {
   background-color: #212223;
-  opacity: .75;
   height: 50px;
   padding: 20px;
   /* border: 1px solid white; */
+}
+
+.result {
+  padding: 5px;
 }
 
 .rules {
@@ -34,7 +37,7 @@ header {
 button {
   background-color: #1a79d9;
   font-size: 5em;
-  border-radius: 50%;
+  border-radius: 15%;
   border: none;
   cursor: pointer;
   padding: 10px 30px;
@@ -56,12 +59,11 @@ button:active {
   gap: 50px;
 }
 
-.player-choice,
-.computer-choice {
+.choice {
   font-size: 24px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding-top: 40px;
   height: 200px;
   width: 200px;
   /* border: 1px lime solid; */
@@ -81,7 +83,7 @@ button:active {
   display: flex;
   justify-content: center;
   gap: 50px;
-  padding: 20px;
+  padding: 25px 0;
 }
 
 .player-score,
@@ -90,6 +92,7 @@ button:active {
   font-size: 20px;
   background-color: rgb(57, 56, 56);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
   width: 200px;
@@ -98,7 +101,7 @@ button:active {
 }
 
 footer {
-  padding: 5px;
+  padding: 10px;
   background-color: #211527;
   margin-top: auto;
 }
