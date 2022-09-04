@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-        }
-
-        button {
-            border-radius: 50px;
-            border: 2px gray solid;
-            cursor: pointer;
-            background-color: lime;
-            padding: 10px 30px;
-            margin: 20px;
-        }
-    </style>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Rock Paper Scissors</title>
     <script defer src="script.js"></script>
-</head>
-<body>
-    <h1>Let's Settle This Like Adults!</h1>
-    <h2>Rock, Paper, Scissors</h2>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <p>To open the console on Mac, press Option, Command, J</p>
+  </head>
 
-    
-</body>
+  <body>
+    <header>
+      <h1>Let's Settle This Like Adults!</h1>
+      <h3>Rock Paper Scissors</h3>
+    </header>
 
+    <div class="results-message">
+      <h2 class="result">Pick Your Weapon</h2>
+      <h3 class="rules">First to score 5 points wins the game</h3>
+    </div>
+    <div class="choices">
+      <div class="player-choice">
+        Player Choice<span class="player-selection">?</span>
+      </div>
+      <div class="player-choice">
+        Computer Choice<span class="computer-selection">?</span>
+      </div>
+    </div>
+
+    <button id="rock" class="✊">✊</button>
+    <button id="paper" class="✋">✋</button>
+    <button id="scissors" class="✌">✌</button>
+    <div class="scoreboard">
+      <div class="player-score">Player Score:<span class="player-points">0</span></div>
+      <div class="computer-score">Computer Score:<span class="computer-points">0</span></div>
+    </div>
+
+    <footer>
+      Created by Tyler Thietje &copy; 2022
+    </footer>
+  </body>
 </html>
